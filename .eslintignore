@@ -1,0 +1,8 @@
+build
+coverage
+public
+
+*.js
+cypress/**/*
+
+__pycache__/

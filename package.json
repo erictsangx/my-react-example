@@ -28,23 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
+    "build-storybook": "build-storybook -s public",
+    "lint": "tsc --noEmit && eslint --fix 'src/**/*.ts{,x}'"
   },
   "browserslist": {
     "production": [
@@ -69,6 +54,12 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "^0.0.9",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^16.2.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "webpack": "^5.71.0"
   }
 }

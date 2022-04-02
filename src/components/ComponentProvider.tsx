@@ -1,15 +1,17 @@
-import {ThemeProvider} from '@emotion/react'
+import { ThemeProvider } from '@emotion/react'
+import { createTheme } from '@mui/material'
 import React from 'react'
-import {createTheme} from '@mui/material'
 
 const theme = createTheme({
-    palette: {
-        mode: 'dark',
-    },
+  palette: {
+    mode: 'dark',
+  },
 })
 
-export const ComponentProvider: React.FC = ({children}) => {
-    return <ThemeProvider theme={theme}>
-        {children}
-    </ThemeProvider>
+export function ComponentProvider({
+  children,
+}: {
+  children: React.ReactChildren
+}) {
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>
 }
