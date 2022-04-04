@@ -8,9 +8,7 @@ type User = {
   name: string
 }
 
-interface PageProps {}
-
-export function Page(props: PageProps): JSX.Element {
+export function Page(): JSX.Element {
   const [user, setUser] = React.useState<User>()
 
   return (

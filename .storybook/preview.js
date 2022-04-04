@@ -1,4 +1,4 @@
-import { ComponentProvider } from '../src/components/ComponentProvider'
+import { ComponentProvider } from '../src/common/ComponentProvider'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

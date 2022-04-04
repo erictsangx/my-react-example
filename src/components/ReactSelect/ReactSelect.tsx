@@ -1,3 +1,4 @@
+import { styled } from '@mui/material'
 import React from 'react'
 import Select from 'react-select'
 
@@ -7,8 +8,28 @@ const options = [
   { value: 'vanilla', label: 'Vanilla' },
 ]
 
-interface ReactSelectProps {}
+const Wrapper = styled('div')`
+  .rc__menu {
+    color: ${(props) => props.theme.palette.primary.dark};
+    background-color: ${(props) => props.theme.palette.background.paper};
+  }
+`
+
+interface ReactSelectProps {
+  placeholder?: string
+}
 
 export function ReactSelect(props: ReactSelectProps): JSX.Element {
-  return <Select isClearable options={options} />
+  const { placeholder } = props
+  return (
+    <Wrapper>
+      <Select
+        isClearable
+        menuIsOpen
+        classNamePrefix="rc"
+        options={options}
+        placeholder={placeholder}
+      />
+    </Wrapper>
+  )
 }

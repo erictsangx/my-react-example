@@ -1,16 +1,17 @@
-import './index.css'
-
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 
 import App from './App'
+import { ComponentProvider } from './common/ComponentProvider'
 import reportWebVitals from './reportWebVitals'
 
 const root = createRoot(document.getElementById('root') as Element)
 
 root.render(
   <React.StrictMode>
-    <App />
+    <ComponentProvider>
+      <App />
+    </ComponentProvider>
   </React.StrictMode>,
 )
 
